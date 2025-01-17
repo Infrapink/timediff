@@ -90,11 +90,11 @@ def timediff(start, end):
 
     start_day = int(start[len(start) - 2:]) # day of the month
     start_month = int(start[len(start) - 5:len(start) - 3]) # number of the month
-    start_year = int(start[:len(d) - 6]) # number of the year. 0 is a valid year number
+    start_year = int(start[:len(start) - 6]) # number of the year. 0 is a valid year number
 
-    end_day = int(end[len(end) - 2:]) # day of the month
+    end_day = int(end[len(end) - 2:])# day of the month
     end_month = int(end[len(end) - 5:len(end) - 3]) # number of the month
-    end_year = int(end[:len(d) - 6]) # number of the year. 0 is a valid year number
+    end_year = int(end[:len(end) - 6]) # number of the year. 0 is a valid year number
 
     delta = tojd(end_day, end_month, end_year) - tojd(start_day, start_month, start_year)
     ans = Fraction(delta, mean_year)
